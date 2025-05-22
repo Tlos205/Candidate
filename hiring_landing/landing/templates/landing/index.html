@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Присоединяйтесь к нашей команде</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">Присоединяйтесь к нашей команде!</h1>
+        <p class="text-center text-gray-600 mb-6">Заполните форму, чтобы стать частью нашей компании.</p>
+        <form method="POST" class="space-y-4">
+            {% csrf_token %}
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Имя</label>
+                <input type="text" name="name" id="name" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" name="email" id="email" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+            </div>
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Телефон</label>
+                <input type="tel" name="phone" id="phone" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+            </div>
+            <div>
+                <label for="description" class="block text-sm font-medium text-gray-700">О себе</label>
+                <textarea name="description" id="description" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
