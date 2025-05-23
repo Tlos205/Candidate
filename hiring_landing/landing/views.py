@@ -3,6 +3,8 @@ from .forms import CandidateForm
 from .utils import send_to_telegram
 import asyncio
 
+
+
 def candidate_form(request):
     if request.method == 'POST':
         form = CandidateForm(request.POST)
@@ -13,7 +15,26 @@ def candidate_form(request):
             return redirect('success')
     else:
         form = CandidateForm()
-    return render(request, 'landing/index.html', {'form': form})
+    context = {
+        'title': 'Оставьте заявку',
+        'form': form,
+        }
+    return render(request, 'landing/index.html', context=context)
 
 def success(request):
-    return render(request, 'landing/success.html')
+    context = {
+        'title': 'Спасибо за заявку!',
+    }
+    return render(request, 'landing/success.html', context=context)
+
+def conditions(request):
+    context = {
+        'title': 'Условия работы',
+    }
+    return render(request, 'landing/conditions.html', context=context)
+
+def vacancies(request):
+    context = {
+        'title': 'Вакансии',
+    }
+    return render(request, 'landing/vacancies.html', context=context)

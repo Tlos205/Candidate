@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="История 100-го пограничного отряда войск ДДДД: участие в Великой Отечественной войне, оборона полуостровов Средний и Рыбачий.">
+    <meta name="keywords" content="пограничный отряд, история, Великая Отечественная война, Карелия, Мурманский округ">
+    <title>{{ title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{% static "/img/art-soldaty-pogranichniki-na.jpg"%}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="{% url 'candidate_form' %}" class="flex items-center">
+    <img src="{% static 'img/logo.png' %}" alt="Logo" class="h-8 mr-2">
+    <span class="text-white text-lg font-bold">Пограничная Служба ФСБ России</span>
+</a>
+            <a href="{% url 'candidate_form' %}" class="text-white text-lg font-bold">Никель</a>
+            <div class="space-x-4">
+                <a href="{% url 'candidate_form' %}" class="text-white hover:text-gray-300">Главная</a>
+                <a href="{% url 'conditions' %}" class="text-white hover:text-gray-300">Условия службы</a>
+                <a href="{% url 'vacancies' %}" class="text-white hover:text-gray-300">История</a>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

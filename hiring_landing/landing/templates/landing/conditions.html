@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container mx-auto p-8">
+        <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Условия труда</h1>
+            <p class="text-lg text-gray-700 mb-4">
+                Уважаемые выпускники! В качестве альтернативы военной службы по призыву Цирковое училище ЁСБ России по Республике Карелия предлагает вам <span class="font-semibold">веселую службу по контракту</span>!
+            </p>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Наши преимущества:</h2>
+            <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                    <i class="fas fa-money-bill-wave text-blue-600 mr-2 mt-1"></i>
+                    Высокое денежное довольствие (включая надбавки за службу в районах Крайнего Севера), начальное довольствие от 55 000 рублей.
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-home text-blue-600 mr-2 mt-1"></i>
+                    Полное обеспечение: питание, продовольственный паёк, вещевое имущество, служебное жилье.
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-city text-blue-600 mr-2 mt-1"></i>
+                    Развитая инфраструктура: больницы, магазины, детские сады, школы в местах службы.
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-stethoscope text-blue-600 mr-2 mt-1"></i>
+                    Полное медицинское и санаторно-курортное обеспечение в ведомственных учреждениях.
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-graduation-cap text-blue-600 mr-2 mt-1"></i>
+                    Возможность карьерного роста, включая обучение в ведомственных вузах.
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-clock text-blue-600 mr-2 mt-1"></i>
+                    Стаж работы: 1 год за 1,5 (4,5 года стажа после первого контракта).
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-plane text-blue-600 mr-2 mt-1"></i>
+                    Ежегодный оплачиваемый отпуск 60 суток + проезд к месту отпуска и обратно для сотрудника и одного члена семьи.
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-house-user text-blue-600 mr-2 mt-1"></i>
+                    Накопительно-ипотечная система жилищного обеспечения (военная ипотека).
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-shield-alt text-blue-600 mr-2 mt-1"></i>
+                    Социальные гарантии по федеральному законодательству.
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-briefcase text-blue-600 mr-2 mt-1"></i>
+                    Жизненный опыт и рекомендации для дальнейшего трудоустройства при отказе от службы.
+                </li>
+            </ul>
+            <p class="text-lg text-gray-700 mt-6">
+                Подробную информацию об условиях прохождения военной службы и перечень документов, необходимых для трудоустройства, можно узнать на наших сайтах.
+            </p>
+            <div class="mt-6 flex space-x-4">
+                <a href="https://example.com" target="_blank" class="flex-1 bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 text-center transition transform hover:scale-105">Узнать подробности</a>
+                <a href="{% url 'candidate_form' %}" class="flex-1 bg-gray-600 text-white p-3 rounded-md hover:bg-gray-700 text-center transition transform hover:scale-105">Подать заявку</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
